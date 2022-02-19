@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Lesson3
 {
@@ -6,36 +8,47 @@ namespace Lesson3
     {
         static void Main(string[] args)
         {
+            string[] hotColors =
+            {
+                "red", "pink"
+            };
+            string[] coldColors =
+            {
+                "green","blue"
+            };
+            string[] cuteAnimals =
+            {
+                "cat"
+            };
+            string[] loyalAnimals =
+            {
+                "dog"
+            };
             //Color+Pet Personality game
-            Console.WriteLine("This is an attempt at some game which could be fun: What 'animal' are you?");
-            Console.WriteLine("Now choose color [red/blue]");
+            Console.WriteLine("What personality are you?");
+            Console.WriteLine("Choose color [red/blue/green/pink]");
             string color = Console.ReadLine();
-            if(color == "red")
+            Console.WriteLine("Choose animal [cat/dog]");
+            string animal = Console.ReadLine();
+            string personality1 = "";
+            string personality2 = "";
+            if(hotColors.Contains(color))
             {
-                Console.WriteLine("Now choose animal [cat/dog]");
-                string animal = Console.ReadLine();
-                if(animal == "cat")
-                {
-                    Console.WriteLine("Red cat. Wow. Such a flex");
-                }
-                else
-                {
-                    Console.WriteLine("Red dog. Still a flex. Cool");
-                }    
+                personality1 = "strong";
             }
-            else
+            else if(coldColors.Contains(color))
             {
-                Console.WriteLine("Now choose animal [cat/dog]");
-                string animal = Console.ReadLine();
-                if (animal == "cat")
-                {
-                    Console.WriteLine("Blue cat. Ew");
-                }
-                else
-                {
-                    Console.WriteLine("Blue dog. You are impossible :rolling-eyes:");
-                }
+                personality1 = "weak";
             }
+            else if(cuteAnimals.Contains(animal))
+            {
+                personality2 = "cute";
+            }
+            else if(loyalAnimals.Contains(animal))
+            {
+                personality2 = "loyal";
+            }
+            Console.WriteLine("You are " + personality1 + " and " + personality2);
         }
     }
 }
