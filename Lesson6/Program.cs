@@ -17,35 +17,26 @@ namespace Lesson6
             for (int w = 0; w != width; w++)
             {
                 Console.WriteLine();
-                if (w == 0)
+                if (w == 0 || w == width - 1)
                 {
                     for (int l = 0; l != length; l++)
                     {
                         Console.Write("#");
                     }
                 }
-                if (0 < w && w < width - 1)                    
+                else
                 {
-                    for (int i = 0; i < 1; i++)
+                    for (int s = 0; s < length; s++)
                     {
-                        Console.Write("#");
-                        for (int s = 2; s != length; s++)
+                        if (s==0 || s==length-1)
+                        {
+                            Console.Write("#");
+                        }
+                        else
                         {
                             Console.Write(" ");
-                            if (s == length - 1)
-                            {
-                                Console.Write("#");
-                            }
                         }
                     }
-                }
-                if (w == width - 1)
-                {
-                    for (int j = 0; j != length; j++)
-                    {
-                        Console.Write("#");
-                    }
-
                 }
             }
         }
