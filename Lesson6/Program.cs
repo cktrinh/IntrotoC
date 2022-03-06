@@ -14,35 +14,29 @@ namespace Lesson6
             int length = int.Parse(Console.ReadLine());
             Console.Write("Please enter width:");
             int width = int.Parse(Console.ReadLine());
-            for (int w = 0; w != width; w++)
+            for (int l = 0; l < length; l++)
+            {
+                Console.Write("#");
+            }
+            for (int w = 1; w < width - 1; w++)
             {
                 Console.WriteLine();
-                if (w == 0 || w == width - 1)
+                Console.Write("#");
+                for (int j = 2; j < length; j++)
                 {
-                    for (int l = 0; l != length; l++)
-                    {
-                        Console.Write("#");
-                    }
+                    Console.Write(" ");
                 }
-                else
-                {
-                    for (int s = 0; s < length; s++)
-                    {
-                        if (s==0 || s==length-1)
-                        {
-                            Console.Write("#");
-                        }
-                        else
-                        {
-                            Console.Write(" ");
-                        }
-                    }
-                }
+                Console.Write("#");
+            }
+            Console.WriteLine();
+            for (int x=0; x < length; x++)
+            {
+                Console.Write("#");
             }
         }
     }
 }
-
+            
 
             //////// A NORMAL SUMTHING - TRIANGLE ////////
             //Console.Write("Enter a number:");
@@ -57,7 +51,7 @@ namespace Lesson6
             //}
 
 
-            ///////////////// STUPID FLIP TRIANGLE/////////
+            ///////////////// FLIP TRIANGLE/////////
             //Console.Write("Enter a number:");
             //int number = int.Parse(Console.ReadLine());
             //for (int i = number; i != 0; i--)
